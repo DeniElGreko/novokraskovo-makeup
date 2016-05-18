@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
-<body>
+<body class="body<a class=month-selector__link">
     <header class="head-section">
         <div class="title-wrapper">
             <h1 class="page-title">ДИНАМИКА СТРОИТЕЛЬСТВА</h1>
@@ -18,24 +18,30 @@
             </ul>
         </div>
         <nav class="date-filter">
+            <input type="radio" id="year2015" name="year">
+            <input type="radio" id="year2016" name="year">
+            <input type="radio" id="year2017" name="year">
             <ul class="date-filter__year-selector">
-                <li class="year-selector__item year-selector--year2015 year-active">2015</li>
-                <li class="year-selector__item year-selector--year2016">2016</li>
+                <li class="year-selector__item year2015"><label for="year2015">2015</label></li>
+                <li class="year-selector__item year2016"><label for="year2016">2016</label></li>
+                <li class="year-selector__item year2017"><label for="year2017">2017</label></li>
             </ul>
-            <ul class="date-filter__month-selector">
-                <li class="month-selector__item month-selector--">январь</li>
-                <li class="month-selector__item month-selector--">февраль</li>
-                <li class="month-selector__item month-selector--">март</li>
-                <li class="month-selector__item month-selector--">апрель</li>
-                <li class="month-selector__item month-selector--">май</li>
-                <li class="month-selector__item month-selector--">июнь</li>
-                <li class="month-selector__item month-selector--">июль</li>
-                <li class="month-selector__item month-selector--">август</li>
-                <li class="month-selector__item month-selector--">сентябрь</li>
-                <li class="month-selector__item month-selector--">октябрь</li>
-                <li class="month-selector__item month-selector--">ноябрь</li>
-                <li class="month-selector__item month-selector--">декабрь</li>
-            </ul>
+            <div class="date-filter__month-selector">
+                <ul class="month-wrapper">
+                    <li class="month-selector__item"><a class="month-selector__link">январь</a></li>
+                    <li class="month-selector__item"><a class="month-selector__link">февраль</a></li>
+                    <li class="month-selector__item"><a class="month-selector__link">март</a></li>
+                    <li class="month-selector__item"><a class="month-selector__link">апрель</a></li>
+                    <li class="month-selector__item"><a class="month-selector__link">май</a></li>
+                    <li class="month-selector__item"><a class="month-selector__link ">июнь</a></li>
+                    <li class="month-selector__item month-selector--active"><a class="month-selector__link">июль</a></li>
+                    <li class="month-selector__item month-selector--notactive"><a class="month-selector__link">август</a></li>
+                    <li class="month-selector__item month-selector--notactive"><a class="month-selector__link">сентябрь</a></li>
+                    <li class="month-selector__item month-selector--notactive"><a class="month-selector__link">октябрь</a></li>
+                    <li class="month-selector__item month-selector--notactive"><a class="month-selector__link">ноябрь</a></li>
+                    <li class="month-selector__item month-selector--notactive"><a class="month-selector__link">декабрь</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="building-plan-img"></div>
     </header>
