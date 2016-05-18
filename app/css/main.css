@@ -132,7 +132,8 @@
           box-sizing: border-box; }
 
 .section-gallery {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 30px; }
 
 .gallery-wrap {
   -webkit-box-sizing: border-box;
@@ -164,9 +165,12 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: 100%;
-    left: 100%;
-    top: 0;
-    padding-top: 45px; }
+    left: -webkit-calc(100% + 90px);
+    left: calc(100% + 90px);
+    padding-top: -webkit-calc(50% - 12px);
+    padding-top: calc(50% - 12px);
+    padding-left: 15px;
+    top: 0; }
 
 .gallery-description {
   width: 550px;
@@ -188,6 +192,28 @@
     padding: 0 20px 20px 0;
     width: 25%;
     display: inline-block; }
+
+.section-footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 205px; }
+  .section-footer-wrapper {
+    display: inline-block;
+    width: 50%;
+    margin: 0 -1px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .section-footer__link {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px 20px;
+    display: inline-block; }
+    .section-footer__link--left {
+      float: right; }
+    .section-footer__link--right {
+      float: left; }
 
 .page-title {
   font: 19px 'PT Sans Caption', sans-serif;
@@ -370,6 +396,7 @@ label {
   font-weight: bold; }
 
 .gallery__head-diagramm {
+  display: inline-block;
   font: 10px 'PT Sans Caption', "sans-serif";
   font-weight: normal;
   letter-spacing: .4em; }
@@ -385,10 +412,121 @@ label {
   background: rgba(30, 28, 27, 0.7) url(../../img/triangle.svg) no-repeat center;
   background-size: 25% 25%;
   position: absolute;
-  height: 100%;
+  height: 98%;
   width: 100%;
   top: 0;
   left: 0; }
+
+.circle {
+  display: inline-block;
+  height: 62px;
+  width: 62px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: -webkit-calc(50% - 30px);
+  top: calc(50% - 30px);
+  left: -60px;
+  overflow: hidden; }
+
+.diagramm {
+  display: inline-block;
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background: grey; }
+  .diagramm:after {
+    content: "";
+    display: inline-block;
+    background: red;
+    position: absolute;
+    left: 30px;
+    height: 62px;
+    width: 31px;
+    -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+    -webkit-animation: diagramm 5s linear infinite;
+            animation: diagramm 5s linear infinite; }
+  .diagramm:before {
+    content: "";
+    display: inline-block;
+    background: red;
+    position: absolute;
+    left: -1px;
+    height: 62px;
+    width: 32px; }
+
+.diagramm-inset {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  background: white;
+  z-index: 100; }
+
+@-webkit-keyframes diagramm {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(300deg);
+            transform: rotate(300deg);
+    z-index: 1000; }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes diagramm {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(300deg);
+            transform: rotate(300deg);
+    z-index: 1000; }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.section-footer__link {
+  font: 10px 'PT Sans Caption', "sans-serif";
+  letter-spacing: .4em;
+  color: #4c4c4c;
+  position: relative; }
+  .section-footer__link--left:before {
+    content: "";
+    position: absolute;
+    margin-top: -8px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid #4c4c4c;
+    background: url(../../img/left_arrow.svg) center no-repeat;
+    background-size: 20px 20px; }
+  .section-footer__link--right:after {
+    content: "";
+    position: absolute;
+    margin-top: -8px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid #4c4c4c;
+    background: url(../../img/right_arrow.svg) center no-repeat;
+    background-size: 20px 20px; }
 
 .body {
   background: #FCFAF7; }

@@ -1,0 +1,30 @@
+.section-footer__link {
+  font: 10px 'PT Sans Caption', "sans-serif";
+  letter-spacing: .4em;
+  color: #4c4c4c;
+  position: relative;
+  &--left:before {
+    content: "";
+    position: absolute;
+    margin-top: -8px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #4c4c4c;
+    background: url(../../img/left_arrow.svg) center no-repeat;
+    background-size: 20px 20px;
+  }
+  &--right:after {
+    content: "";
+    position: absolute;
+    margin-top: -8px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #4c4c4c;
+    background: url(../../img/right_arrow.svg) center no-repeat;
+    background-size: 20px 20px;
+  }
+}
