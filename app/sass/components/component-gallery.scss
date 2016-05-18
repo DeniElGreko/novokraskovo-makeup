@@ -1,0 +1,25 @@
+.gallery__head-title {
+  font: 28px 'PT Sans Caption', "sans-serif";
+  font-weight: bold;
+}
+.gallery__head-diagramm {
+  font: 10px 'PT Sans Caption', "sans-serif";
+  font-weight: normal;
+  letter-spacing: .4em;
+}
+.gallery-description {
+  font: 15px 'PT Sans', 'sans-serif';
+}
+.gallery-video {
+  position: relative;
+}
+.gallery-video:after {
+  content: "";
+  background: rgba(30, 28, 27, .7) url(../../img/triangle.svg) no-repeat center;
+  background-size: 25% 25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

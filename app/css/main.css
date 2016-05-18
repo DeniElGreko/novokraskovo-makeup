@@ -131,6 +131,64 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.section-gallery {
+  width: 100%; }
+
+.gallery-wrap {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 150px 0 170px; }
+
+.title-w {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  left: 50%; }
+
+.gallery__head {
+  height: 110px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .gallery__head-title {
+    padding-top: 40px;
+    display: inline-block;
+    height: 110px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    left: -50%; }
+  .gallery__head-diagramm {
+    position: absolute;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    padding-top: 45px; }
+
+.gallery-description {
+  width: 550px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 110px;
+  text-align: center;
+  padding-top: 10px; }
+
+.gallery-collection {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .gallery-collection__item {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: -4px;
+    padding: 0 20px 20px 0;
+    width: 25%;
+    display: inline-block; }
+
 .page-title {
   font: 19px 'PT Sans Caption', sans-serif;
   font-weight: bold;
@@ -306,6 +364,31 @@ input {
 
 label {
   cursor: pointer; }
+
+.gallery__head-title {
+  font: 28px 'PT Sans Caption', "sans-serif";
+  font-weight: bold; }
+
+.gallery__head-diagramm {
+  font: 10px 'PT Sans Caption', "sans-serif";
+  font-weight: normal;
+  letter-spacing: .4em; }
+
+.gallery-description {
+  font: 15px 'PT Sans', 'sans-serif'; }
+
+.gallery-video {
+  position: relative; }
+
+.gallery-video:after {
+  content: "";
+  background: rgba(30, 28, 27, 0.7) url(../../img/triangle.svg) no-repeat center;
+  background-size: 25% 25%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }
 
 .body {
   background: #FCFAF7; }

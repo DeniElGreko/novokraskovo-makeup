@@ -103,3 +103,64 @@
   height: 170px;
   box-sizing: border-box;
 }
+
+
+//GALLERY
+
+.section-gallery {
+  width: 100%;
+}
+.gallery-wrap {
+  box-sizing: border-box;
+  margin: 0 150px 0 170px;
+}
+
+
+.title-w {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+}
+
+
+.gallery__head {
+  height: 110px;
+  box-sizing: border-box;
+  &-title {
+    padding-top: 40px;
+    display: inline-block;
+    height: 110px;
+    box-sizing: border-box;
+    position: relative;
+    left: -50%;
+  }
+  &-diagramm {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    padding-top: 45px;
+  }
+}
+.gallery-description {
+  width: 550px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 110px;
+  text-align: center;
+  padding-top: 10px;
+}
+.gallery-collection {
+  width: 100%;
+  box-sizing: border-box;
+  &__item {
+    box-sizing: border-box;
+    margin-right: -4px;
+    padding: 0 20px 20px 0;
+    width: 25%;
+    display: inline-block;
+  }
+}
