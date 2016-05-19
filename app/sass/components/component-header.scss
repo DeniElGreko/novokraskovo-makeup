@@ -6,10 +6,10 @@
 }
 .title-links {
   &--camera-view {
-    background: url(../img/web_camera.svg) no-repeat;
+    background: url(../../img/web_camera.svg) no-repeat;
   }
   &--build-queue {
-    background: url(../img/construction_sequence.svg) no-repeat;
+    background: url(../../img/construction_sequence.svg) no-repeat;
   }
 }
 .title-links {
@@ -18,6 +18,8 @@
 }
 .date-filter__year-selector {
   font: 23px 'PT Sans Caption', sans-serif;
+  text-align: center;
+  transition: .3s;
 }
 .year-selector__item {
   cursor: pointer;
@@ -90,7 +92,7 @@
   z-index: 1000;
 }
 .building-plan-img {
-  background: url(../img/gen_plan.svg) no-repeat;
+  background: url(../../img/gen_plan.svg) no-repeat;
   background-size: 165px 120px;
   background-position: center;
 }
@@ -100,78 +102,15 @@
 //YEAR SELECTOR DEMO ANIMATION
 
 
-
-#year2015:checked ~ .date-filter__year-selector > .year2015 {
+.year-selector__item_active {
   width:200px;
   height:100%;
   font-size:64px;
-  position: absolute;
-  left: calc(50% - 100px);
   width:200px;
   padding-top: 0;
   transition: .3s;
 }
-#year2015:checked ~ .date-filter__year-selector {
-  &>.year2016 {
-    position: absolute;
-    left: calc(50% + 100px);
-    transition: .3s;
-  }
-  &>.year2017 {
-    position: absolute;
-    left: calc(50% + 200px);
-    transition: .3s;
-  }
-}
 
-  #year2016:checked ~ .date-filter__year-selector > .year2016 {
-    width:200px;
-    height:100%;
-    font-size:64px;
-    position: absolute;
-    left: calc(50% - 100px);
-    width:200px;
-    padding-top: 0;
-    transition: .3s;
-  }
-#year2016:checked ~ .date-filter__year-selector {
-  &>.year2015 {
-    position: absolute;
-    left: calc(50% - 200px);
-    transition: .3s;
-  }
-  &>.year2017 {
-    position: absolute;
-    left: calc(50% + 100px);
-    transition: .3s;
-  }
-}
-  #year2017:checked ~ .date-filter__year-selector > .year2017 {
-    width:200px;
-    height:100%;
-    font-size:64px;
-    position: absolute;
-    left: calc(50% - 100px);
-    width:200px;
-    padding-top: 0;
-    transition: .3s;
-  }
-#year2017:checked ~ .date-filter__year-selector {
-  &>.year2015 {
-    position: absolute;
-    left: calc(50% - 300px);
-    transition: .3s;
-  }
-  &>.year2016 {
-    position: absolute;
-    left: calc(50% - 200px);
-    transition: .3s;
-  }
-
-}
-  input {
-    display:none;
-  }
   label {
     cursor:pointer;
   }
