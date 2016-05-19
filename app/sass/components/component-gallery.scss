@@ -27,59 +27,37 @@
 
 
 // DIAGRAMM
-.circle {
-  display: inline-block;
-  height: 62px;
-  width: 62px;
-  box-sizing: border-box;
+
+.diagramm {
   position: absolute;
-  border-radius: 50%;
-  top: calc(50% - 30px);
   left: -60px;
+  top: 28px;
+  height: 58px;
+  width: 58px;
+}
+.percent{
+  font: 15px "PT Sans Caption", sans-serif;
+  color: #3F3F3F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 21px;
+  left: 15px;
+}
+.circle {
+  position: relative;
+  display: block;
+  float: left;
+  box-sizing: border-box;
   overflow: hidden;
 }
-.diagramm {
-  display: inline-block;
-  position: absolute;
-  left: 1px;
-  top: 0px;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background: grey;
-  &:after {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: 30px;
-    height: 62px;
-    width: 31px;
-    transform-origin: 0 50%;
-    animation: diagramm 5s linear infinite;
-  }
-  &:before {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: -1px;
-    height: 62px;
-    width: 32px;
-  }
+circle {
+  fill: rgba(0,0,0,0);
+  stroke: #D8D8D8;
+  stroke-width: 2;
+  stroke-dasharray: 176px 176px;
 }
-.diagramm-inset {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  border-radius: 50%;
-  height: 56px;
-  width: 56px;
-  background: white;
-  z-index: 100;
-}
-@keyframes diagramm {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(300deg);z-index: 1000;}
-  100% {transform: rotate(360deg);}
+circle:nth-child(2n) {
+  fill: rgba(0,0,0,0);
+  stroke: #EC3227;
+  stroke-width: 2;
 }

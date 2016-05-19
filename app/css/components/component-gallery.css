@@ -24,83 +24,36 @@
   top: 0;
   left: 0; }
 
+.diagramm {
+  position: absolute;
+  left: -60px;
+  top: 28px;
+  height: 58px;
+  width: 58px; }
+
+.percent {
+  font: 15px "PT Sans Caption", sans-serif;
+  color: #3F3F3F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 21px;
+  left: 15px; }
+
 .circle {
-  display: inline-block;
-  height: 62px;
-  width: 62px;
+  position: relative;
+  display: block;
+  float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: absolute;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  top: -webkit-calc(50% - 30px);
-  top: calc(50% - 30px);
-  left: -60px;
   overflow: hidden; }
 
-.diagramm {
-  display: inline-block;
-  position: absolute;
-  left: 1px;
-  top: 0px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background: grey; }
-  .diagramm:after {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: 30px;
-    height: 62px;
-    width: 31px;
-    -webkit-transform-origin: 0 50%;
-        -ms-transform-origin: 0 50%;
-            transform-origin: 0 50%;
-    -webkit-animation: diagramm 5s linear infinite;
-            animation: diagramm 5s linear infinite; }
-  .diagramm:before {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: -1px;
-    height: 62px;
-    width: 32px; }
+circle {
+  fill: transparent;
+  stroke: #D8D8D8;
+  stroke-width: 2;
+  stroke-dasharray: 176px 176px; }
 
-.diagramm-inset {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  height: 56px;
-  width: 56px;
-  background: white;
-  z-index: 100; }
-
-@-webkit-keyframes diagramm {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-    z-index: 1000; }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes diagramm {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-    z-index: 1000; }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+circle:nth-child(2n) {
+  fill: transparent;
+  stroke: #EC3227;
+  stroke-width: 2; }

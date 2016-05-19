@@ -92,7 +92,7 @@
 
 .year-selector__item {
   height: 100%;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100px;
@@ -140,7 +140,7 @@
           box-sizing: border-box;
   margin: 0 150px 0 170px; }
 
-.title-w {
+.title-wrap {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -165,8 +165,8 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: 100%;
-    left: -webkit-calc(100% + 90px);
-    left: calc(100% + 90px);
+    left: -webkit-calc(100% + 30px);
+    left: calc(100% + 30px);
     padding-top: -webkit-calc(50% - 12px);
     padding-top: calc(50% - 12px);
     padding-left: 15px;
@@ -221,17 +221,20 @@
   letter-spacing: .4em; }
 
 .title-links--camera-view {
-  background: url(../img/web_camera.svg) no-repeat; }
+  background: url(../../img/web_camera.svg) no-repeat; }
 
 .title-links--build-queue {
-  background: url(../img/construction_sequence.svg) no-repeat; }
+  background: url(../../img/construction_sequence.svg) no-repeat; }
 
 .title-links {
   font: 15px 'PT Sans', sans-serif;
   letter-spacing: .1em; }
 
 .date-filter__year-selector {
-  font: 23px 'PT Sans Caption', sans-serif; }
+  font: 23px 'PT Sans Caption', sans-serif;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s; }
 
 .year-selector__item {
   cursor: pointer; }
@@ -303,90 +306,18 @@
   z-index: 1000; }
 
 .building-plan-img {
-  background: url(../img/gen_plan.svg) no-repeat;
+  background: url(../../img/gen_plan.svg) no-repeat;
   background-size: 165px 120px;
   background-position: center; }
 
-#year2015:checked ~ .date-filter__year-selector > .year2015 {
+.year-selector__item_active {
   width: 200px;
   height: 100%;
   font-size: 64px;
-  position: absolute;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
   width: 200px;
   padding-top: 0;
   -webkit-transition: .3s;
   transition: .3s; }
-
-#year2015:checked ~ .date-filter__year-selector > .year2016 {
-  position: absolute;
-  left: -webkit-calc(50% + 100px);
-  left: calc(50% + 100px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2015:checked ~ .date-filter__year-selector > .year2017 {
-  position: absolute;
-  left: -webkit-calc(50% + 200px);
-  left: calc(50% + 200px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2016:checked ~ .date-filter__year-selector > .year2016 {
-  width: 200px;
-  height: 100%;
-  font-size: 64px;
-  position: absolute;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
-  width: 200px;
-  padding-top: 0;
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2016:checked ~ .date-filter__year-selector > .year2015 {
-  position: absolute;
-  left: -webkit-calc(50% - 200px);
-  left: calc(50% - 200px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2016:checked ~ .date-filter__year-selector > .year2017 {
-  position: absolute;
-  left: -webkit-calc(50% + 100px);
-  left: calc(50% + 100px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2017:checked ~ .date-filter__year-selector > .year2017 {
-  width: 200px;
-  height: 100%;
-  font-size: 64px;
-  position: absolute;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
-  width: 200px;
-  padding-top: 0;
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2017:checked ~ .date-filter__year-selector > .year2015 {
-  position: absolute;
-  left: -webkit-calc(50% - 300px);
-  left: calc(50% - 300px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-#year2017:checked ~ .date-filter__year-selector > .year2016 {
-  position: absolute;
-  left: -webkit-calc(50% - 200px);
-  left: calc(50% - 200px);
-  -webkit-transition: .3s;
-  transition: .3s; }
-
-input {
-  display: none; }
 
 label {
   cursor: pointer; }
@@ -417,86 +348,39 @@ label {
   top: 0;
   left: 0; }
 
+.diagramm {
+  position: absolute;
+  left: -60px;
+  top: 28px;
+  height: 58px;
+  width: 58px; }
+
+.percent {
+  font: 15px "PT Sans Caption", sans-serif;
+  color: #3F3F3F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 21px;
+  left: 15px; }
+
 .circle {
-  display: inline-block;
-  height: 62px;
-  width: 62px;
+  position: relative;
+  display: block;
+  float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: absolute;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  top: -webkit-calc(50% - 30px);
-  top: calc(50% - 30px);
-  left: -60px;
   overflow: hidden; }
 
-.diagramm {
-  display: inline-block;
-  position: absolute;
-  left: 1px;
-  top: 0px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background: grey; }
-  .diagramm:after {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: 30px;
-    height: 62px;
-    width: 31px;
-    -webkit-transform-origin: 0 50%;
-        -ms-transform-origin: 0 50%;
-            transform-origin: 0 50%;
-    -webkit-animation: diagramm 5s linear infinite;
-            animation: diagramm 5s linear infinite; }
-  .diagramm:before {
-    content: "";
-    display: inline-block;
-    background: red;
-    position: absolute;
-    left: -1px;
-    height: 62px;
-    width: 32px; }
+circle {
+  fill: transparent;
+  stroke: #D8D8D8;
+  stroke-width: 2;
+  stroke-dasharray: 176px 176px; }
 
-.diagramm-inset {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  height: 56px;
-  width: 56px;
-  background: white;
-  z-index: 100; }
-
-@-webkit-keyframes diagramm {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-    z-index: 1000; }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes diagramm {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(300deg);
-            transform: rotate(300deg);
-    z-index: 1000; }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+circle:nth-child(2n) {
+  fill: transparent;
+  stroke: #EC3227;
+  stroke-width: 2; }
 
 .section-footer__link {
   font: 10px 'PT Sans Caption', "sans-serif";

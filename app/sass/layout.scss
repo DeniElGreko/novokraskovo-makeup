@@ -116,7 +116,7 @@
   margin: 0 150px 0 170px;
 }
 
-.title-w {
+.title-wrap {
   display: inline-block;
   box-sizing: border-box;
   position: relative;
@@ -140,7 +140,7 @@
     display: block;
     box-sizing: border-box;
     height: 100%;
-    left: calc(100% + 90px);
+    left: calc(100% + 30px);
     padding-top: calc(50% - 12px);
     padding-left: 15px;
     top: 0;

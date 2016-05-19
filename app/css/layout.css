@@ -92,7 +92,7 @@
 
 .year-selector__item {
   height: 100%;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100px;
@@ -140,7 +140,7 @@
           box-sizing: border-box;
   margin: 0 150px 0 170px; }
 
-.title-w {
+.title-wrap {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -165,8 +165,8 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: 100%;
-    left: -webkit-calc(100% + 90px);
-    left: calc(100% + 90px);
+    left: -webkit-calc(100% + 30px);
+    left: calc(100% + 30px);
     padding-top: -webkit-calc(50% - 12px);
     padding-top: calc(50% - 12px);
     padding-left: 15px;
